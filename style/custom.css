@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Bowlby+One+SC');
+
+body, html {
+	font-family: 'Raleway', sans-serif;
+	background-image: url("../images/asfalt-dark.png");
+	color: rgb(53,74,93);
+	margin-bottom: 2em;
+	height: 100%;
+}
+
+.cover {
+	background-image: url("../images/cover.jpg");
+	height: 100%; 
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.welcome {
+	text-align: left;
+	position: absolute;
+	top: 40%;
+	left: 25%;
+	transform: translate(-50%, -50%);
+	color: rgb(188,214,235);
+	text-shadow: 2px 2px 4px #000000;
+	font-family: 'Bowlby One SC', cursive;
+	letter-spacing: .15em;
+}
+
+.welcome h1 {
+	font-size: 2rem;
+}
+
+.arrow {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 40%;
+}
+
+.update {
+	margin-top: 1rem;
+}
+
+.navbar {
+	background-color: rgb(249,249,249);
+	background-image: url("../images/asfalt-dark.png");
+}
+
+.navbar-light .navbar-brand {
+	color: rgb(53,74,93);
+}
+
+.navbar-light .navbar-brand:hover {
+	color: rgb(102,123,143);
+}
+
+.navbar-light .navbar-brand:active {
+	color: rgb(196,68,81);
+}
+
+.navbar-light .navbar-nav .nav-link {
+	color: rgb(53,74,93);
+	font-weight: 900;
+	text-transform: uppercase;
+	letter-spacing: .1em;
+}
+
+.navbar-nav .nav-item:hover .nav-link {
+	color: rgb(102,123,143);
+}
+
+.navbar-nav .nav-item.active .nav-link {
+	color: rgb(196,68,81);
+}
+
+.navbar-light .navbar-nav .show>.nav-link {
+	color: rgb(102,123,143);
+}
+
+.fixed-top {
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 1030;
+}
+
+.dropdown-menu {
+	border-radius: 0;
+	border-style: none;
+	background-color: rgb(249,249,249);
+	background-image: url("../images/asfalt-dark.png");
+}
+
+.dropdown-item {
+	color: rgb(53,74,93);
+	text-transform: uppercase;
+	letter-spacing: .1em;
+}
+
+.dropdown-menu a:hover{
+	color: rgb(102,123,143);
+	background-image: url("../images/asfalt-dark.png");
+}
+
+.dropdown-item.active, .dropdown-item:active {
+	color: rgb(196,68,81);
+	text-decoration: none;
+	background-color: transparent;
+}
+
+.header {
+	margin-top: 1.5em;
+	padding: .5em;
+	background-color: rgb(53,74,93);
+	background-image: url('../images/black-felt.png');
+	color: #F5F5DC;
+	border-bottom: .1em solid rgb(196,68,81);
+	letter-spacing: .05em;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.search-field {
+	margin-top: 1.5em;
+}
+
+.search-field input{
+	border-radius: 1em;
+	padding: 0.5em;
+	background-color: rgb(229,229,229);
+	margin-bottom: 1.5em;
+}
+
+.subhead3 {
+	font-size: 1.25em;
+	background-color: rgb(53,74,93);
+	color: white;
+	border-radius: .25em;
+	padding: .5em;
+	border: .05em solid rgb(196,68,81);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.emphasis {
+	text-transform: uppercase;
+	font-weight: 900;
+	letter-spacing: .025em;
+}
+
+.emphasis a {
+	color: rgb(196,68,81);
+	text-decoration: none;
+}
+
+ol, li {
+	line-height: 2em;
+}
+
+.card {
+	width: 18rem;
+	margin: 1rem;
+	background-color: rgb(229,229,229);
+	background-image: url("../images/asfalt-dark.png");
+	border-radius: 0;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card-header {
+	margin: 0.5rem;
+	background-color: rgb(53,74,93);
+	background-image: url('../images/black-felt.png');
+	color: rgb(255,255,255);
+	border-bottom: .1em solid rgb(196,68,81);
+	text-align: center;
+	font-size: 1.5rem;
+}
+
+.card-header:first-child {
+	border-radius: 0;
+	margin-top: .005em;
+	margin-left: -.65em;
+	margin-right: -.65em;
+}
+
+.card-body a {
+	color: rgb(53,74,93);
+	text-transform: uppercase;
+	letter-spacing: .1em;
+	font-weight: 900;
+}
+
+.card-body a:hover {
+	text-decoration: none;
+	color: rgb(102,123,143);
+}
+
+.footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: rgb(249,249,249);
+	background-image: url("../images/asfalt-dark.png");
+	color: rgb(53,74,93);
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: .1em;
+	font-weight: 900;
+}
+
+.footer a {
+	text-decoration: none;
+	color: rgb(53,74,93);
+}
+
+.footer a:hover {
+	text-decoration: none;
+	color: rgb(102,123,143);
+}
+
+.text-muted {
+	color: rgb(53,74,93);
+}
+
+.table {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	background-color: rgb(229,229,229);	
+	background-image: url("../images/asfalt-dark.png");
+}
+
+img {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	max-width: 100%;
+	height: auto;
+}

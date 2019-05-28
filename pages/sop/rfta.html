@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">	
+	<link rel="stylesheet" href="../../style/custom.css">
+	<title>RFTA</title>
+</head>
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light">
+			<a class="navbar-brand" href="../../index.html">Intake Central</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link" href="../docs.html">Documents</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="../clients.html">Master Client List</a>
+						</li>
+						<div class="reference">
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									Reference
+								</a>
+								<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+									<a class="dropdown-item" href="../reference/agency-listing.html">Agency Listing</a>
+									<a class="dropdown-item" href="../reference/caseload-distribution.html">Caseload Distribution</a>
+									<a class="dropdown-item" href="../reference/payment-standard.html">Payment Standards</a>
+									<a class="dropdown-item" href="../reference/utility-chart.html">Utility Chart</a>
+								</div>								
+							</li>
+						</div>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								Standard Operating Procedures
+							</a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+								<a class="dropdown-item" href="otc.html">On The Clock</a>
+								<a class="dropdown-item" href="extension.html">Extension</a>
+								<a class="dropdown-item active" href="#">RFTA Submission</a>
+								<a class="dropdown-item" href="lease-up.html">Lease-Up</a>
+								<a class="dropdown-item" href="transfers.html">In-State Transfers</a>
+								<a class="dropdown-item" href="ra.html">Reasonable Accomodation Requests</a>
+								<a class="dropdown-item" href="lap.html">Language Assistance Protocol</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+		</nav>
+		<h1 class="header">Request for Tenancy Approval (RFTA)</h1>
+		<div class="container">
+			<p>In order for a client's prospective unit to be inspected, the request for tenancy approval must be filled out and completed by the client and prospective property owner.</p>
+			<div class="forms">
+				<button class="subhead3">Review Forms</button>
+				<ol>
+					<li>Check RFTA to ensure it is complete and both the client and property owner have signed it. <span class="emphasis">If any portion of the RFTA is left blank, follow-up with both parties before moving forward.</span> Date stamp using the date the RFTA is completed and signed only.</li>
+					<li>Property owner and/or manager must also submit the W9 tax form for all RFTAs submitted. <span class="emphasis">All new W9s submitted on or after November 16, 2018 must use the October 2018 version.</span> Any prior versions submitted are considered outdated and will not be accepted.</li>
+					<li>The direct deposit enrollment form and voided check must also be filled out and accompanied by verification from the p.o. financial institution that confirms the account and routing numbers. A voided check that notes this information is preferred. <span class="emphasis">This is only mandatory if the either the prospective property owner is new to the program or is looking to update their bank information.</span></li>
+					<li>Complete the property owner data entry cover sheet consistent with information noted on the W9 tax form. Print this out, attach the W9 and direct deposit information, and submit to the leased housing data coordinator, the staff person responsible for verifying this information with the IRS. This is typically verified within 24 hours. <span class="emphasis">If the verification is rejected, follow-up with the property owner/manager before proceeding</span></li>
+					<li>Contact client and property owner to confirm this is all received. Place a priority one note and update the intake master list.</li>
+					<li>Leave client's file in the intake coordinator's drawer.</li>
+				</ol>
+			</div>
+			<div class="tracker-procedure">
+				<button class="subhead3">Tracker Procedures</button>
+				<ol>
+					<li>Begin processing on Tracker only if the W9 verification is approved.</li>
+					<li>Run action "6.100 RFTA Submitted". The effective date will be the date the RFTA was received (which should already be date stamped) regardless of when it's being processed. <br /><img src="../../images/tw-images/rfta_action.jpg" alt="RFTA Action ID" /><br /><span class="emphasis">The OTC tile will automatically remove the expiration date as the client's voucher is frozen from the date the RFTA is submitted to either the date the client leases-up or if the prospective unit is no-go'd.</span></li>
+					<li>Click on the "Prospective Units" link under the "Actions" drop-down menu.<br /><img src="../../images/tw-images/pro_units.jpg" alt="Prospective Units Link" /></li>
+					<li>Check to see if unit requested already exists in Tracker. If it does then ensure all of the relevant unit information is consistent with the RFTA. Update if necessary.<br /><img src="../../images/tw-images/existing_unit.jpg" alt="Existing Unit" /></li>
+					<li>If the unit does not exist in Tracker, change the "Curren Unit" option to "Add New Unit" option. Enter the unit information consistent with what is noted on the RFTA. <br /><img src="../../images/tw-images/add_unit1.jpg" alt="Add New Unit 1"><br />The owner's information can be entered either by typing in the entity name noted on the verification or the ID number the leased housing data coordinator notes. Be sure this is noted in the owner, agent, and payee fields.<br /><img src="../../images/tw-images/add_unit2.jpg" alt="Add New Unit 2"></li>
+					<li>Ensure client's family composition and income information is properly entered and updated.</li>
+					<li>Click the "Calc 40 Percent" link in the "Actions" drop-down menu and then click on the "Utilities" tile.</li>
+					<li>Select "Yes" and use chart "55" if the client is responsible for any of the utilities as reported on the RFTA. Save before proceeding.<br /><img src="../../images/tw-images/utilities_info.jpg" alt="Utlities Info" /></li>
+					<li>Update utilities only noting what the client will be responsible for based on what's reported on the RFTA. Save this and then click on "Calc Utility Allowance" to ensure the correct <span class="emphasis"><a href="../reference/utility-chart.html" target="_blank">utility allowance</a></span> is noted.<br /><img src="../../images/tw-images/tenant_pay.jpg" alt="" /></li>
+					<li>Go back to the initial "Calc 40 Percent" then enter the rent amount that was requested on the RFTA. Ensure that the correct payment standard is noted. <br /><img src="../../images/tw-images/calc40-2.jpg" alt="Calc 40%" /><span class="emphasis"><br />If the <a href="../reference/payment-standard.html" target="_blank">payment standard</a> is inaccurate, manually enter the correct amount</span>. Calculate the maximum housing cost and note it on the RFTA.</li>
+					<li>Go back to "Prospective Units" and click on the "Print Request Inspection - RFTA Form" button. Use the date the client intends to lease-up for the print the RFTA.<br /><img src="../../images/tw-images/pro_units2.jpg" alt="" /><br /> Note the maximum housing cost and program type on the printed RFTA. Create a copy of the original RFTA and the printed one generated from Tracker and leave this in the file bound with W9 and direct deposit information.</li>
+					<li>Submit original RFTA and the printed one generated from Tracker to either the inspection coordinator responsible for scheduling new unit inspections or the property owner services manager for RFTAs that include any de-leading verifications.</li>
+					<li><span class="emphasis"><a href="mailto:noble.williams@metrohousingboston.org?cc=wil.santana@metrohousingboston.org&Subject=Confirming%20RFTA%20Submission&body=Client's name:%0A%0aUnit Address:" target="_top">Click here</a></span> to email the inspection coordinator to confirm the unit was submitted. <span class="emphasis">If the RFTA includes any de-leading documentation, <a href="mailto:howard.wensley@metrohousingboston.org,noble.williams@metrohousingboston.org?cc=wil.santana@metrohousingboston.org&Subject=Confirming%20RFTA%20Submission&body=Client's name:%0A%0aUnit Address:%0A%0aSubmitted to Property Owner Services Manager's LoC inbox" target="_top">click here</a> to email the Property Owner Services Manager</span></li>
+					<li>Contact the client and property owner to confirm the RFTA was submitted.</li> 
+					<li>Update the intake tracking sheet, leave a priority one note that documents it was submitted, and place the file in the intake coordinator's drawer.</li>
+				</ol>
+			</div>
+			</div>
+		</div>
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+		<script src="../../scripts/custom.js"></script>
+	</body>
+	<footer class="footer">
+		<div class="container">
+			<span>Questions or concerns? <a href="mailto:wil.santana@metrohousingboston.org?&Subject=Intake%20Central%20Troubleshoot&body=Question/Concern:%0A%0aDetailed Note:" target="_top">Click here</a> | Created and maintained by Wil Santana</span>
+		</div>
+	</footer>
+</html>

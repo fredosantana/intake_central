@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">	
+	<link rel="stylesheet" href="../style/custom.css">
+	<title>Clients</title>
+</head>
+<nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light">
+	<a class="navbar-brand" href="../index.html">Intake Central</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link" href="docs.html">Documents</a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link" href="#">Master Client List<span class="sr-only">(current)</span></a>
+					</li>
+					<div class="reference">
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								Reference
+							</a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+								<a class="dropdown-item" href="reference/agency-listing.html">Agency Listing</a>
+								<a class="dropdown-item" href="reference/caseload-distribution.html">Caseload Distribution</a>
+								<a class="dropdown-item" href="reference/payment-standard.html">Payment Standards</a>
+								<a class="dropdown-item" href="reference/utility-chart.html">Utility Chart</a>
+							</div>								
+						</li>
+					</div>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Standard Operating Procedures
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="../pages/sop/otc.html">On The Clock</a>
+							<a class="dropdown-item" href="../pages/sop/extension.html">Extension</a>
+							<a class="dropdown-item" href="../pages/sop/rfta.html">RFTA Submission</a>
+							<a class="dropdown-item" href="../pages/sop/lease-up.html">Lease-Up</a>
+							<a class="dropdown-item" href="../pages/sop/transfers.html">In-State Transfers</a>
+							<a class="dropdown-item" href="../pages/sop/ra.html">Reasonable Accomodation Request</a>
+							<a class="dropdown-item" href="../pages/sop/lap.html">Language Assistance Protocol</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+	</nav>
+	<h1 class="header">Master Client List</h1>
+	<body>
+			<div id="client-list" class="container">
+					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#program">
+							Numbers by Programs
+						</button>
+						<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#status">
+								Numbers by Status
+						</button>
+						
+						<!-- Modal -->
+						<div class="modal fade" id="program" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h5 class="modal-title" id="exampleModalLongTitle">Numbers by Programs</h5>
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+										</button>
+									</div>
+									<div class="modal-body">
+											<div id="dashboard">
+													<ul>
+														<li id="CCVP"></li>
+														<li id="FUP"></li>
+														<li id="HCV"></li>
+														<li id="HOP"></li>
+													</ul>
+												</div>
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="modal fade" id="status" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+								<div class="modal-dialog" role="document">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalLongTitle">Numbers by Status</h5>
+											<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+												<span aria-hidden="true">&times;</span>
+											</button>
+										</div>
+										<div class="modal-body">
+												<div id="dashboard">
+														<ul>
+															<li id="otc"></li>
+															<li id="firstExtension"></li>
+															<li id="ra"></li>
+															<li id="rfta"></li>
+															<li id="passedUnit"></li>
+															<li id="leased"></li>
+														</ul>
+													</div>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						
+						
+					<div class="search-field">
+						<input class="search" size="50" placeholder="Enter last name, program, or file location"/>
+					</div>  
+					<div class="table-responsive">     
+							<table class="table table-hover table-fixed">
+							<thead>
+									<tr>
+									<th><button class="sort btn" data-sort="last-name">Last Name</button></th>
+									<th><button class="sort btn" data-sort="first-name">First Name</button></th>
+									<th><button class="sort btn" data-sort="program">Program</button></th>
+									<th><button class="sort btn" data-sort="status">Status</button></th>
+									<th><button class="sort btn" data-sort="file-location">File Location</button></th>
+									<th><button class="sort btn" data-sort="language">Language Preference</button></th>
+									<th>Selected Date</th>
+									<th>Eligibility Date</th>
+									<th>Issued Date</th>
+									<th>Initial Expiration Date</th>
+									<th>Current Expiration Date</th>
+									<th>RFTA Received Date</th>
+									<th>RFTA Submitted Date</th>
+									<th>Passed Inspection Date</th>
+									<th>Lease-Up Date</th>
+									</tr>
+							</thead>
+							<tbody class="list">
+									<tr id='santana'>
+											<td class="last-name">Santana</td>
+											<td class="first-name">Wil</td>
+											<td class="program HCV">HCV</td>
+											<td class="status leased">Leased</td>
+											<td class="file-location">File Room</td>
+											<td class="language">Spanish</td>
+											<td>5/1/2018</td>
+											<td>5/7/2018</td>
+											<td>6/1/2018</td>
+											<td>7/31/2018</td>
+											<td>8/31/2018</td>
+											<td>8/15/2018</td>
+											<td>8/16/2018</td>
+											<td>8/24/2018</td>
+											<td>9/1/2018</td>
+									</tr>
+									<tr id='santana'>
+											<td class="last-name">Santana</td>
+											<td class="first-name">Wil</td>
+											<td class="program HCV">HCV</td>
+											<td class="status leased">Leased</td>
+											<td class="file-location">File Room</td>
+											<td class="language">Spanish</td>
+											<td>5/1/2018</td>
+											<td>5/7/2018</td>
+											<td>6/1/2018</td>
+											<td>7/31/2018</td>
+											<td>8/31/2018</td>
+											<td>8/15/2018</td>
+											<td>8/16/2018</td>
+											<td>8/24/2018</td>
+											<td>9/1/2018</td>
+									</tr>
+									
+									<tr id="nemer">
+											<td class="last-name">Nemer</td>
+											<td class="first-name">Drew</td>
+											<td class="program FUP">FUP</td>
+											<td class="status rfta">RFTA Submitted</td>
+											<td class="file-location">Wil's Drawer</td>
+											<td class="language">English</td>
+											<td>5/1/2018</td>
+											<td>5/7/2018</td>
+											<td>6/1/2018</td>
+											<td>7/31/2018</td>
+											<td>8/31/2018</td>
+											<td>8/15/2018</td>
+											<td>8/16/2018</td>
+											<td>8/24/2018</td>
+											<td>9/1/2018</td>
+	
+									</tr>
+									<tr id='tyawil'>
+											<td class="last-name">Tyawil</td>
+											<td class="first-name">Mariam</td>
+											<td class="program HOP">HOP</td>
+											<td class="status rfta">RFTA Submitted</td>
+											<td class="file-location">Wil's Drawer</td>
+											<td class="language">French</td>
+											<td>5/1/2018</td>
+											<td>5/7/2018</td>
+											<td>6/1/2018</td>
+											<td>7/31/2018</td>
+											<td>8/31/2018</td>
+											<td>8/15/2018</td>
+											<td>Pending</td>
+											<td>Pending</td>
+											<td>Pending</td>
+	
+									</tr>
+									<tr id='tyawil'>
+											<td class="last-name">Tyawil</td>
+											<td class="first-name">Mariam</td>
+											<td class="program HOP">HOP</td>
+											<td class="status rfta">RFTA Submitted</td>
+											<td class="file-location">Wil's Drawer</td>
+											<td class="language">French</td>
+											<td>5/1/2018</td>
+											<td>5/7/2018</td>
+											<td>6/1/2018</td>
+											<td>7/31/2018</td>
+											<td>8/31/2018</td>
+											<td>8/15/2018</td>
+											<td>Pending</td>
+											<td>Pending</td>
+											<td>Pending</td>
+	
+									</tr>
+									<tr id='kyle'>
+											<td class="last-name">Kyle</td>
+											<td class="first-name">Mitch</td>
+											<td class="program FUP">FUP</td>
+											<td class="status firstExtension">1st 30 Day Extension</td>
+											<td class="file-location">File Room</td>
+											<td class="language">German</td>
+											<td>5/1/2018</td>
+											<td>5/7/2018</td>
+											<td>6/1/2018</td>
+											<td>7/31/2018</td>
+											<td>8/31/2018</td>
+											<td>8/15/2018</td>
+											<td>8/16/2018</td>
+											<td>8/24/2018</td>
+											<td>9/1/2018</td>
+	
+									</tr>
+									<tr id="paradiso">
+											<td class="last-name">Paradiso</td>
+											<td class="first-name">Diana</td>
+											<td class="program HCV">HCV</td>
+											<td class="status rfta">RFTA Submitted</td>
+											<td class="file-location">Wil's Drawer</td>
+											<td class="language">Italian</td>
+											<td>5/1/2018</td>
+											<td>5/7/2018</td>
+											<td>6/1/2018</td>
+											<td>7/31/2018</td>
+											<td>8/31/2018</td>
+											<td>8/15/2018</td>
+											<td>8/16/2018</td>
+											<td>8/24/2018</td>
+											<td>9/1/2018</td>
+	
+									</tr>
+									<tr id="bbj">
+											<td class="last-name">Beaupin-Jaramillo</td>
+											<td class="first-name">Brunette</td>
+											<td class="program FUP">FUP</td>
+											<td class="status ra">Reasonable Accomodation</td>
+											<td class="file-location">Brunette's RA Box</td>
+											<td class="language">Haitian Creole</td>
+											<td>5/1/2018</td>
+											<td>5/7/2018</td>
+											<td>6/1/2018</td>
+											<td>7/31/2018</td>
+											<td>8/31/2018</td>
+											<td>8/15/2018</td>
+											<td>8/16/2018</td>
+											<td>8/24/2018</td>
+											<td>9/1/2018</td>
+	
+									</tr>
+									<tr id="nguyen">
+											<td class="last-name">Nguyen</td>
+											<td class="first-name">Thao</td>
+											<td class="program HCV">HCV</td>
+											<td class="status passedUnit">Unit Passed/Pending Lease-Up</td>
+											<td class="file-location">Wil's Drawer</td>
+											<td class="language">Vietnamese</td>
+											<td>5/1/2018</td>
+											<td>5/7/2018</td>
+											<td>6/1/2018</td>
+											<td>7/31/2018</td>
+											<td>8/31/2018</td>
+											<td>8/15/2018</td>
+											<td>8/16/2018</td>
+											<td>8/24/2018</td>
+											<td>9/1/2018</td>
+	
+									</tr>
+									<tr id="fluke">
+											<td class="last-name">Fluke</td>
+											<td class="first-name">Josh</td>
+											<td class="program CCVP">CCVP</td>
+											<td class="status otc">OTC</td>
+											<td class="file-location">File Room</td>
+											<td class="language">Undisclosed</td>
+											<td>5/1/2018</td>
+											<td>5/7/2018</td>
+											<td>6/1/2018</td>
+											<td>7/31/2018</td>
+											<td>8/31/2018</td>
+											<td>8/15/2018</td>
+											<td>8/16/2018</td>
+											<td>8/24/2018</td>
+											<td>9/1/2018</td>
+	
+									</tr>
+									<tr id="fluke">
+											<td class="last-name">Fluke</td>
+											<td class="first-name">Josh</td>
+											<td class="program CCVP">CCVP</td>
+											<td class="status otc">OTC</td>
+											<td class="file-location">File Room</td>
+											<td class="language">Undisclosed</td>
+											<td>5/1/2018</td>
+											<td>5/7/2018</td>
+											<td>6/1/2018</td>
+											<td>7/31/2018</td>
+											<td>8/31/2018</td>
+											<td>8/15/2018</td>
+											<td>8/16/2018</td>
+											<td>8/24/2018</td>
+											<td>9/1/2018</td>
+	
+									</tr>
+									<tr id="house">
+											<td class="last-name">House</td>
+											<td class="first-name">Stefan</td>
+											<td class="program HOP">HOP</td>
+											<td class="status rfta">RFTA Submitted</td>
+											<td class="file-location">Wil's Drawer</td>
+											<td class="language">Undisclosed</td>
+											<td>5/1/2018</td>
+											<td>5/7/2018</td>
+											<td>6/1/2018</td>
+											<td>7/31/2018</td>
+											<td>8/31/2018</td>
+											<td>8/15/2018</td>
+											<td>8/16/2018</td>
+											<td>8/24/2018</td>
+											<td>9/1/2018</td>
+	
+									</tr>
+									<tr id="spencer">
+											<td class="last-name">Spencer</td>
+											<td class="first-name">Cherelle</td>
+											<td class="program HCV">HCV</td>
+											<td class="status firstExtension">1st 30 Day Extension</td>
+											<td class="file-location">File Room</td>
+											<td class="language">English</td>
+											<td>5/1/2018</td>
+											<td>5/7/2018</td>
+											<td>6/1/2018</td>
+											<td>7/31/2018</td>
+											<td>8/31/2018</td>
+											<td>8/15/2018</td>
+											<td>8/16/2018</td>
+											<td>8/24/2018</td>
+											<td>9/1/2018</td>
+	
+									</tr>
+									<tr id="nemer">
+											<td class="last-name">Nemer</td>
+											<td class="first-name">Drew</td>
+											<td class="program FUP">FUP</td>
+											<td class="status rfta">RFTA Submitted</td>
+											<td class="file-location">Wil's Drawer</td>
+											<td class="language">English</td>
+											<td>5/1/2018</td>
+											<td>5/7/2018</td>
+											<td>6/1/2018</td>
+											<td>7/31/2018</td>
+											<td>8/31/2018</td>
+											<td>8/15/2018</td>
+											<td>8/16/2018</td>
+											<td>8/24/2018</td>
+											<td>9/1/2018</td>
+	
+									</tr>
+							</tbody>
+							</table>
+					</div> 
+				</div>
+		
+	
+		
+
+   
+
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
+		<script src="../scripts/custom.js"></script>
+		<script src="../scripts/dashboard.js"></script>
+	</body>
+	<footer class="footer">
+		<div class="container">
+			<span>Questions or concerns? <a href="mailto:wil.santana@metrohousingboston.org?&Subject=Intake%20Central%20Troubleshoot&body=Question/Concern:%0A%0aDetailed Note:" target="_top">Click here</a> | Created and maintained by Wil Santana</span>
+		</div>
+	</footer>
+</html>
